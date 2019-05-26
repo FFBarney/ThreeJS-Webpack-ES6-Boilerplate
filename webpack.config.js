@@ -114,7 +114,7 @@ module.exports = env => {
     },
 
     performance: {
-      hints: 'warning'
+      hints: false
     },
 
     // lets you precisely control what bundle information gets displayed
