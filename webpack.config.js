@@ -7,7 +7,7 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 // Paths
-const entry = './src/js/app.js';
+const entry = './src/js/main.js';
 const includePath = path.join(__dirname, 'src/js');
 const nodeModulesPath = path.join(__dirname, 'node_modules');
 
@@ -53,7 +53,7 @@ module.exports = env => {
       // the url to the output directory resolved relative to the HTML page
       publicPath: 'js',
       // the filename template for entry chunks
-      filename: 'app.js'
+      filename: 'main.js'
     },
 
     // Webpack 4 mode helper

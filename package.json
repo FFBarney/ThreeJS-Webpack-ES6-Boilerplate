@@ -18,7 +18,9 @@
   },
   "dependencies": {
     "es6-promise": "^4.2.6",
+    "signals": "^1.0.0",
     "three": "^0.104.0",
+    "three-gltf-loader": "^1.104.0",
     "tween.js": "^16.6.0"
   },
   "devDependencies": {

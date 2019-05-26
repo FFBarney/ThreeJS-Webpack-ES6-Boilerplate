@@ -1,17 +1,15 @@
-// Global imports -
 import * as THREE from 'three';
 import TWEEN from 'tween.js';
 
-import Renderer from './components/renderer';
-import Camera from './components/camera';
-import Controls from './components/controls';
+import Camera from '../components/camera';
+import Renderer from '../components/renderer';
+import Controls from '../components/controls';
+import Stats from '../helpers/stats';
+import config from '../data/config';
 
-import Stats from './helpers/stats';
-import config from './../data/config';
-
-export default class Main {
-  constructor(container) {
-    this._container = container;
+export default class GameState {
+  constructor() {
+    this._container = document.getElementById(config.appContainerName);
 
     this._clock == null;
     this._scene = null;
@@ -19,9 +17,11 @@ export default class Main {
     this._camera = null;
     this._controls = null;
     this._fog = null;
+  }
 
-    this._init();
+  start() {
     this._hideLoadingText();
+    this._init();
     this._render();
   }
 
@@ -55,7 +55,7 @@ export default class Main {
     }
 
     TWEEN.update();
-    this._controls.threeControls.update();
+    this._controls.update();
 
     requestAnimationFrame(this._render.bind(this));
   }

@@ -1,6 +1,7 @@
 export default {
   isDev: false,
   showStats: true,
+  appContainerName: 'appContainer',
   clearColor: 0xffffff,
   antialias: true,
   shadowMapEnabled: true,
