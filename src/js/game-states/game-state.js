@@ -11,7 +11,7 @@ export default class GameState {
   constructor() {
     this._container = document.getElementById(config.appContainerName);
 
-    this._clock == null;
+    this._clock = null;
     this._scene = null;
     this._renderer = null;
     this._camera = null;
