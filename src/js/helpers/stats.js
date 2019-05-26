@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Local vars for rStats
 let rS, bS, glS, tS;
 export default class Stats {

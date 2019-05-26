@@ -36,7 +36,7 @@ export default class GameState {
     if (config.isDev && config.showStats) {
       this.stats = new Stats(this._renderer);
       this.stats.setUp();
-    };
+    }
   }
 
   _hideLoadingText() {

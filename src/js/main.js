@@ -7,6 +7,7 @@ import GameState from './game-states/game-state';
 import PreloaderState from './game-states/preloader-state';
 
 // Check environment and set the Config helper
+// eslint-disable-next-line no-undef
 if (__ENV__ === 'dev') {
   console.log('----- RUNNING IN DEV ENVIRONMENT! -----');
 

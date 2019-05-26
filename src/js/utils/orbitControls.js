@@ -1,3 +1,4 @@
+/* eslint-disable */
 module.exports = function(THREE) {
   var MOUSE = THREE.MOUSE
   if (!MOUSE)
