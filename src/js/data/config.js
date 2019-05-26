@@ -2,9 +2,9 @@ export default {
   isDev: false,
   showStats: true,
   appContainerName: 'appContainer',
-  clearColor: 0xffffff,
+  clearColor: 0xeeeeee,
   antialias: true,
-  shadowMapEnabled: true,
+  shadowMapEnabled: false,
   fog: {
     color: 0xffffff,
     near: 0.0008

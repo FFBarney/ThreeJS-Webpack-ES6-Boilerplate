@@ -37,6 +37,32 @@ export default class GameState {
       this.stats = new Stats(this._renderer);
       this.stats.setUp();
     }
+
+    this._createLight();
+    this._createBox();
+  }
+
+  _createLight() {
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    directionalLight.position.set(0, -1, 2);
+
+    this._scene.add(ambientLight);
+    this._scene.add(directionalLight);
+  }
+
+  _createBox() {
+    const planeGeometry = new THREE.PlaneGeometry(100, 100, 32);
+    const plane = new THREE.Mesh(planeGeometry, new THREE.MeshPhysicalMaterial({ color: 0x393e46 }));
+
+    const boxGeometry = new THREE.BoxBufferGeometry(30, 30, 30);
+    const boxMesh = new THREE.Mesh(boxGeometry, new THREE.MeshPhysicalMaterial({ color: 0xd65a31 }));
+
+    planeGeometry.rotateX(-Math.PI / 2);
+    boxMesh.position.y = 15;
+
+    this._scene.add(boxMesh);
+    this._scene.add(plane)
   }
 
   _hideLoadingText() {

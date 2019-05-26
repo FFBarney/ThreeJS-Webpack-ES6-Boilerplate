@@ -9,7 +9,9 @@ export default class PreloaderState {
     this._textureLoader = new THREE.TextureLoader(this._manager);
     this._modelLoaders = new GLTFLoader(this._manager);
     this._root = './assets';
-
+    
+    THREE.Cache.enabled = true;
+    
     this.onComplete = new Signal();
   }
 
