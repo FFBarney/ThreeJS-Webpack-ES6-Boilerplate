@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 
 import OrbitControls from '../../utils/orbitControls';
-import Config from '../../data/config';
+import config from '../../data/config';
 
 // Controls based on orbit controls
 export default class Controls {
@@ -14,17 +14,17 @@ export default class Controls {
   }
 
   init() {
-    this.threeControls.target.set(Config.controls.target.x, Config.controls.target.y, Config.controls.target.z);
-    this.threeControls.autoRotate = Config.controls.autoRotate;
-    this.threeControls.autoRotateSpeed = Config.controls.autoRotateSpeed;
-    this.threeControls.rotateSpeed = Config.controls.rotateSpeed;
-    this.threeControls.zoomSpeed = Config.controls.zoomSpeed;
-    this.threeControls.minDistance = Config.controls.minDistance;
-    this.threeControls.maxDistance = Config.controls.maxDistance;
-    this.threeControls.minPolarAngle = Config.controls.minPolarAngle;
-    this.threeControls.maxPolarAngle = Config.controls.maxPolarAngle;
-    this.threeControls.enableDamping = Config.controls.enableDamping;
-    this.threeControls.enableZoom = Config.controls.enableZoom;
-    this.threeControls.dampingFactor = Config.controls.dampingFactor;
+    this.threeControls.target.set(config.controls.target.x, config.controls.target.y, config.controls.target.z);
+    this.threeControls.autoRotate = config.controls.autoRotate;
+    this.threeControls.autoRotateSpeed = config.controls.autoRotateSpeed;
+    this.threeControls.rotateSpeed = config.controls.rotateSpeed;
+    this.threeControls.zoomSpeed = config.controls.zoomSpeed;
+    this.threeControls.minDistance = config.controls.minDistance;
+    this.threeControls.maxDistance = config.controls.maxDistance;
+    this.threeControls.minPolarAngle = config.controls.minPolarAngle;
+    this.threeControls.maxPolarAngle = config.controls.maxPolarAngle;
+    this.threeControls.enableDamping = config.controls.enableDamping;
+    this.threeControls.enableZoom = config.controls.enableZoom;
+    this.threeControls.dampingFactor = config.controls.dampingFactor;
   }
 }
