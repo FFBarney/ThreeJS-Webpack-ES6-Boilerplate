@@ -57,6 +57,6 @@ export default class Main {
     TWEEN.update();
     this._controls.threeControls.update();
 
-    requestAnimationFrame(this._render.bind(this)); // Bind the main class instead of window object
+    requestAnimationFrame(this._render.bind(this));
   }
 }
